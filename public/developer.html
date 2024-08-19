@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Developer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lavender;
+            background-image: url('icon/wallpaper1.png'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: rgb(209, 174, 47);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .developer-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .developer-item {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .developer-item img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #333;
+            transition: transform 0.3s;
+        }
+
+        .developer-item img:hover {
+            transform: scale(1.1);
+        }
+
+        .developer-item a {
+            display: block;
+            margin-top: 10px;
+            font-size: 1em;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .developer-item a:hover {
+            color: #555;
+        }
+
+        a.back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        a.back-link:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Meet the Developers</h2>
+        <div class="developer-list">
+            <!-- Developer 1 -->
+            <div class="developer-item">
+                <a href="developer1.html">
+                    <img src="images/developer1.jpg" alt="Developer 1">
+                    <span>Developer 1</span>
+                </a>
+            </div>
+            <!-- Developer 2 -->
+            <div class="developer-item">
+                <a href="developer2.html">
+                    <img src="images/developer2.jpg" alt="Developer 2">
+                    <span>Developer 2</span>
+                </a>
+            </div>
+            <!-- Developer 3 -->
+            <div class="developer-item">
+                <a href="developer3.html">
+                    <img src="images/developer3.jpg" alt="Developer 3">
+                    <span>Developer 3</span>
+                </a>
+            </div>
+            <!-- Developer 4 -->
+            <div class="developer-item">
+                <a href="developer4.html">
+                    <img src="images/developer4.jpg" alt="Developer 4">
+                    <span>Developer 4</span>
+                </a>
+            </div>
+            <!-- Developer 5 -->
+            <div class="developer-item">
+                <a href="developer5.html">
+                    <img src="images/developer5.jpg" alt="Developer 5">
+                    <span>Developer 5</span>
+                </a>
+            </div>
+            <!-- Developer 6 -->
+            <div class="developer-item">
+                <a href="developer6.html">
+                    <img src="images/developer6.jpg" alt="Developer 6">
+                    <span>Developer 6</span>
+                </a>
+            </div>
+            <!-- Developer 7 -->
+            <div class="developer-item">
+                <a href="developer7.html">
+                    <img src="images/developer7.jpg" alt="Developer 7">
+                    <span>Developer 7</span>
+                </a>
+            </div>
+        </div>
+        <a href="index.html" class="back-link">Go Back to Main Page</a>
+    </div>
+</body>
+</html>

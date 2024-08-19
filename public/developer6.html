@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JOWEN RESUME</title>
+<style>
+  *
+  {
+    
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body 
+{
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container 
+{
+    position: relative;
+    width: 100%;
+    max-width: 1000%;
+    min-height: 1000px;
+    background-color: #fff;
+    display: grid;
+    margin: 50px;
+    grid-template-columns: 1.3fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 1);
+}
+.container .left_Side 
+{
+    position: relative;
+    background-color: #003147;
+    padding: 40px;
+}
+.profileText
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.profileText .imgBx
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+.profileText .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    object-fit: cover;
+}
+.profileText h2 
+{
+    color: #fff;
+    font-size: 1,5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.profileText h2 span
+{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+.contactInfo
+{
+    padding-top: 40px;
+}
+.title
+{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.contactInfo ul
+{
+    position: relative;  
+}
+.contactInfo ul li
+{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.contactInfo ul li .icon
+{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+.contactInfo ul li span
+{
+    color: #fff;
+    font-weight: 300;
+}
+.contactInfo.education li
+{
+    margin-bottom: 15px;
+}
+.contactInfo.education h5
+{
+    color: #03a9f4;
+    font-weight: 500;
+}
+.contactInfo.education h4
+{
+    color: #fff;
+    font-weight: 300;
+}
+
+.container .right_Side 
+{
+    position: relative;
+    background-color: #fff;
+    padding: 40px;
+}
+.about
+{
+    margin-bottom: 50px;
+}
+.about:last-child
+{
+    margin-bottom: 0;
+}
+.title2
+{
+    color: #03a9f4;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+p
+{
+    color: #003147;
+}
+.about.experience
+{
+    margin-bottom: 200px;
+}
+
+</style>
+<body>
+  <div class="container">
+    <div class="left_Side">
+      <div class="profileText">
+      <div class="imgBx">
+        <img src="images/developer6.jpg"></a>
+    </div>
+    <h2>Jowen H. Borja<br><span>Cybersecurity Student</span></h2>
+  </div>
+  <div class="contactInfo">
+    <h3 class="title">Contact Info</h3>
+    <ul>
+      <li>
+        <span class="icon"><i class="fa fa-mobile" aria-hidden="true"></i></span>
+        <span class="text">(+63) 962-466-1742</span>
+      </li>
+      <li>
+        <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+        <span class="text">jowenhalili11@gmail.com</span>
+      </li> <li>
+        <span class="icon"><i class="fa fa-facebook-square" aria-hidden="true"></i></span>
+        <span class="text">facebook.com/itsn3whalili/</span>
+      </li> <li>
+        <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+        <span class="text">14 Fraternal St. Quiapo Manila</span>
+      </li>
+    </ul>
+  </div>
+  <div class="contactInfo education">
+    <h3 class="title">Education</h3>
+    <ul>
+      <li>
+        <h5>2024</h5>
+        <h4>Universidad de Manila</h4>
+        <h4>Current</h4>
+      </li>
+      <li>
+        <h5>2015 - 2021</h5>
+        <h4>Victorino Mapa High School</h4>
+      </li>
+      <li>
+        <h5>2009 - 2015</h5>
+        <h4>Apolinario Mabini Elementary School</h4>
+      </li>
+    </ul>
+  </div>
+</div>
+    <div class="right_Side">
+  <div class="about">
+    <h2 class="title2">Objectives</h2>
+    <p>To engage myself where I can practice my skills and abilities that secure a challenging and productive position 
+      that will provide ample opportunities for career growth and personal development. <br>  To become useful in any company 
+      and be able to share my knowledge and expertise with position I am applying for.</p>
+  </div>
+  <div class="about experience">
+    <h2 class="title2">Experience</h2>
+  </div>
+  <div class="about">
+    <h2 class="title2">Webinar Attended</h2> 
+    <tr>
+      <img src="developer_cert\developer6/cert1.jpeg" alt="CYB" width="25%" height="25%">
+    </tr>
+    <tr>
+      <img src="developer_cert\developer6/cert2.jpeg" alt="CYB" width="25%" height="25%">
+    </tr>
+    <tr>
+      <img src="developer_cert\developer6/cert3.jpeg" alt="CYB" width="25%" height="25%">
+    </tr>
+    <tr>
+      <img src="developer_cert\developer6/cert4.jpeg" alt="CYB" width="25%" height="25%">
+    </tr>
+      <tr>
+      <img src="developer_cert\developer6/cert5.jpeg" alt="CYB" width="25%" height="25%">
+    </tr>
+      
+    </tr>
+  </div>
+  </div>
+  </div>
+  <a href="developer.html"><img src="icon/arrow.png" alt="Next" width="20%" height="20%"></a>
+</body>
+</html>

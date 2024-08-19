@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Threat and Phishing Detector</title>
+    <style>
+       
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 125vh;
+            background-image: url('icon/wallpaper1.png'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+            background-color: rgba(255, 255, 255, 0.8); 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+            margin-top: 100px;
+        }
+
+        h1 {
+            margin-bottom: 550px;
+            right: 545px;
+            color: rgb(65, 253, 3); 
+            font-size: 2.2em;
+            position: absolute;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            -webkit-text-stroke: 1px rgb(241, 249, 3); /* White outline with a thickness of 1px */
+            
+        
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            
+        }
+        h3 {
+            margin-top: auto;
+            right: 50px;
+            color: rgb(56, 56, 56); 
+            font-size: 0.9em;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
+          
+           
+            
+        
+        }
+
+        input[type="file"],
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #9b9999;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #00fff6;
+            color: rgb(15, 14, 14);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background-color: #fb32fe;
+        }
+
+        hr {
+            margin: 30px 0;
+            border: 0;
+            border-top: 1px solid #ddd;
+        }
+
+        #fileResult, #urlResult {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+           
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+            
+        }
+
+        .navbar ul li {
+            display: inline;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #04eaff;
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        .navbar ul li a:hover {
+            color: #fe2a2a;
+        }
+        .social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+    </style>
+</head>
+<body>
+    <h1>DICET: Threat Analyzer</h1>
+
+    <div class="navbar">
+        <ul>
+            <li><a href="developer.html">Developer</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="joincommunity.html">Join Community</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Upload a File to Check Threat Percentage</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <button type="button" onclick="uploadFile()">Upload File</button>
+        </form>
+
+        <div id="fileResult" style="display: none;">
+            <p><strong>Percentage of Threats:</strong> <span id="filePercentage"></span>%</p>
+        </div>
+
+        <hr>
+
+        <h2>Check URL for Phishing</h2>
+        <form id="urlForm">
+            <input type="text" name="urlToCheck" id="urlToCheck" placeholder="Enter URL">
+            <button type="button" onclick="checkURL()">Check URL</button>
+        </form>
+
+        <div id="urlResult" style="display: none;">
+            <p><strong>Phishing Check Result:</strong> <span id="urlStatus"></span></p>
+        </div>
+    </div>
+    <div class="container">
+        <h3>
+            Disclaimer: The DICET: Threat Analyzer is a free tool provided "AS IS". 
+            Please note that no security solution can guarantee 100% detection of threats. We cannot be held responsible 
+            for any undetected malicious code on your website or others.
+        </h3>
+        <div class="social-links">
+            <a href="https://web.telegram.org/k/#-2218882570/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" class="social-icon">
+            </a>
+            <a href="https://github.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" class="social-icon">
+            </a>
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7230608419559235584/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="social-icon">
+            </a>
+            <a href="https://discord.com/channels/1274416774112088147/1274416774112088150" target="_blank">
+                <img src="icon/DC.jpg" alt="Discord" class="social-icon">
+            </a>
+        </div>
+    </div>
+        
+    </div>
+
+    <script>
+        function uploadFile() {
+            const fileInput = document.getElementById('fileToUpload');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert('Please select a file.');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            fetch('/analyze', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('filePercentage').textContent = data.percentage;
+                document.getElementById('fileResult').style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while processing the file.');
+            });
+        }
+
+        function checkURL() {
+            const urlInput = document.getElementById('urlToCheck').value.trim();
+
+            if (!urlInput) {
+                alert('Please enter a URL.');
+                return;
+            }
+
+            fetch('/check-url', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ url: urlInput })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('urlStatus').textContent = data.isPhishing ? "This URL is potentially phishing!" : "This URL seems safe.";
+                document.getElementById('urlResult').style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while checking the URL.');
+            });
+        }
+    </script>
+</body>
+</html>
